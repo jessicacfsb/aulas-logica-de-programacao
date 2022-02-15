@@ -30,9 +30,9 @@ escreval("Dados da Pessoa 1: ")
 escreval("------------------------")
 escreval("Nome: ",pessoa1)
 escreval("Idade: ",idade1)
-escreval("------------------------")
+
 escreval("")
-escreval("------------------------")
+
 escreval("Dados da Pessoa 2: ")
 escreval("------------------------")
 escreval("Nome: ",pessoa2)
