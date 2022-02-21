@@ -1,4 +1,4 @@
-algoritmo "soma_altura"
+algoritmo "alturas"
 // Função : Fazer um programa para ler nome, idade e altura de N pessoas,
 // conforme exemplo. Depois, mostrar na tela a altura média das pessoas, e
 // mostrar também a porcentagem de pessoas com menos de 16 anos, bem como os
@@ -6,11 +6,11 @@ algoritmo "soma_altura"
 // Autor : jessica Nascimento
 // Data : 18/02/2022
 var
-quantidade, i: inteiro
-soma, media: real
-nome: vetor [0..4] de caractere
-idade: vetor [0..4] de inteiro
-altura : vetor [0..4] de real
+quantidade, i, menorIdade: inteiro
+soma, media, porcentagem: real
+nome: vetor [0..9] de caractere
+idade: vetor [0..9] de inteiro
+altura : vetor [0..9] de real
 
 inicio
 escreval("Quantas pessoas serao digitadas? ")
@@ -26,11 +26,28 @@ para i de 0 ate quantidade-1 faca
     leia(altura[i])
 fimpara
 
-para i de 1 ate quantidade-1 faca
+para i de 0 ate quantidade-1 faca
     soma <- soma + altura[i]
+    
 fimpara
-    media <- soma / quantidade
-    escreval(med
+
+media <- soma / quantidade
+escreval("Altura media = ", media:4:2)
+    
+para i de 0 ate quantidade-1 faca
+    se idade[i] < 16 entao
+        menorIdade<- menorIdade+1
+    fimse
+fimpara
+
+porcentagem <- menorIdade * 100 / quantidade
+escreval("Pessoas com menos de 16 anos: ", porcentagem:3:1, "%")
+
+para i de 0 ate quantidade-1 faca
+     se idade[i] < 16 entao
+        escreval(nome[i])
+     fimse
+fimpara
 
 
 
